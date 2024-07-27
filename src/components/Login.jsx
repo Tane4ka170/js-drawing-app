@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { login } from "../services/authService";
+import { useNavigate } from "react-router-dom";
+import { login } from "../api/authService";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
       await login(username, password);
-      history.push("/chat");
+      navigate("/chat");
     } catch (error) {
       console.error("Login failed", error);
     }
