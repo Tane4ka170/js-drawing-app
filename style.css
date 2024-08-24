@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alatsi", sans-serif;
+  margin: 0;
+}
